@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+
+<form class="" action="/saveQuestion" method="post">
+  <div class="form-group">
+    <label for="">Title</label>
+    <input class="form-control" type="text" name="title" placeholder="Enter the Title" required>
+    <label for="">Question</label>
+    <textarea class="form-control" name="content" rows="5" cols="80" placeholder="Question Area" required></textarea>
+
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Submit</button>
+</form>
+
+<%- include("partials/footer") -%>

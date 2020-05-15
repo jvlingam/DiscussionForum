@@ -1,0 +1,11 @@
+<%- include("partials/header") -%>
+
+<form class="" action="/startDiscussion" method="post">
+    <button class="btn btn-primary start-btn" type="submit" name="button">+ Start Discussion</button>
+</form>
+
+<% questions.forEach(function(question){ %>
+    <p><a href="/question/<%=question._id%>"> <%=question.title%> </a></p>
+<% }) %>
+
+<%- include("partials/footer") -%>

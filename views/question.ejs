@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+<h1><%= question.title %></h1>
+<p><%= question.content %></p>
+
+<form class="" action="/updateQuestion/<%= question._id %>" method="post">
+  <div class="form-group">
+      <textarea class="form-control" name="answer" rows="5" cols="80"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Post Your Answer</button>
+</form>
+
+<hr />
+<% question.answers.forEach(function(answer){ %>
+  <p><%= answer.content %></p>
+  <hr />
+<% }) %>
+
+<%- include("partials/footer") -%>
